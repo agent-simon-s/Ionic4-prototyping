@@ -24,3 +24,11 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+button {
+	height: 2rem;
+	width: 14rem;
+	border: 1px solid #e6e6e6;
+	text-transform: uppercase;
+	font-weight: bold;
+}
