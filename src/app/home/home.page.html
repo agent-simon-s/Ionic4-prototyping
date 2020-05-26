@@ -9,7 +9,7 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">dev-ion4-reacitve-form-array</ion-title>
+      <ion-title size="large">dev ion4 reacitve form array</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -29,17 +29,28 @@
       <app-ng-guide-form [questions]="questions$ | async"></app-ng-guide-form>
     </div> -->
 
-    <div class="container">
+<!--     <div class="container">
       <strong>dev.to VERSION</strong>
       <p>Based on https://dev.to/max/build-dynamic-angular-forms-on-the-fly-4n3m</p>
       <app-devto-dynamic-form #dynamicForm [questions]="questions"></app-devto-dynamic-form>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container">
       <strong>fireship VERSION</strong>
       <p>Taken from https://fireship.io/lessons/basics-reactive-forms-in-angular/</p>
       <app-fireship-form></app-fireship-form>
+    </div> -->
+
+    <div class="container">
+      <strong>FLURRY</strong>
+      <p>Test Flurry Library</p>
+      <br>
+      <button type="flurryB" (click)="flurryEvtTest('flurryB')">Log Button Click</button>
+      <br><br>
+      <button type="flurryE" (click)="flurryEvtTest('flurryE')">Log Event</button>
     </div>
+
+
     
   </div>
 </ion-content>
