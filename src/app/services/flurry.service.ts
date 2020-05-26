@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { FlurryAnalytics, FlurryAnalyticsObject, FlurryAnalyticsOptions } from '@ionic-native/flurry-analytics/ngx';
-//import { Storage } from '@ionic/storage';
+import { Storage } from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
