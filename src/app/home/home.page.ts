@@ -20,13 +20,11 @@ export class HomePage {
   	private flurry: FlurryService 
   ) {}
 
-
 	public flurryEvtTest(evt){
 		console.log(` click flurryTest ${evt}`);
 		let eventString = `Button Click ${evt}`;
 		this.flurry.logit(eventString);
 	}
-
 
 	ngOnInit() {
 		
