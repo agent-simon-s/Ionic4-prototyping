@@ -1,0 +1,73 @@
+  <form role="form" name="questionForm" class="scale-form" [formGroup]="myQuizForm">
+
+	<h2>Loading Quiz</h2>
+	<ion-list class="quiz-form">
+		<ion-item>
+         <ion-input 
+         	required 
+         	type="email" 
+			   placeholder="&nbsp;*YOUR EMAIL ADDRESS"
+         	autocomplete="on"
+         	name="email"
+         	formControlName="email"
+         ></ion-input>
+      </ion-item>
+
+		<div formArrayName="questions">
+		<div>
+ 		<ion-item *ngFor="let q of quesArray.controls; let i = index;" [formGroupName]="i">
+			<p>A Question</p>
+			<ion-list class="answer-choices">
+				<ion-radio-group  formControlName="answer">
+					<ion-item  name="answer" class="answer-choice"  lines="none">
+						<ion-radio value="a.val" class="answer-bubble a-style"  slot="start" size="large" name="ess01" ></ion-radio>
+						<ion-label class="ion-text-wrap">
+						 a.val
+						</ion-label>
+					</ion-item>
+					<ion-item  name="answer" class="answer-choice"  lines="none">
+						<ion-radio value="b.val" class="answer-bubble b-style"  slot="start" size="large" name="ess01" ></ion-radio>
+						<ion-label class="ion-text-wrap">
+						 b.val
+						</ion-label>
+					</ion-item>
+					<ion-item  name="answer" class="answer-choice"  lines="none">
+						<ion-radio value="c.val" class="answer-bubble c-style"  slot="start" size="large" name="ess01" ></ion-radio>
+						<ion-label class="ion-text-wrap">
+						 c.val
+						</ion-label>
+					</ion-item>
+				</ion-radio-group>
+			</ion-list>
+		</ion-item>
+		</div>
+		</div>
+
+		Value: {{ myQuizForm.value | json }}
+	</ion-list>
+
+
+
+
+
+<!--   <h3 class="question-number">Question {{questions.myCurQuestion.pole}} of {{ this.questions.myCurSetLength }}:</h3> 
+
+    <div *ngFor="let q of questions.myQuestionSet; let i = index;">
+      <div class="questionGroup" *ngIf="q.id == questions.myCurQuestion.id" [ngClass]="{'active-question': q.id == questions.myCurQuestion.id }">
+
+        <p class="question-text">{{q.poser}}<sup *ngIf="q.note">{{q.note}}</sup></p>
+        <ion-list class="answer-choices">
+          <ion-radio-group (ionChange)="questions.queResponce($event)">
+
+            <ion-item *ngFor="let a of q.answers" name="answer" class="answer-choice"  lines="none">
+              <ion-radio value={{a.val}} class="answer-bubble a-style"  slot="start" size="large" name="{{q.scale}}{{q.id}}" ></ion-radio>
+              <ion-label class="ion-text-wrap" [innerHTML]="a.text+' ['+a.val+']'">
+                [{{a.val}}]
+              </ion-label>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </div>
+    </div>  -->
+
+  </form>
