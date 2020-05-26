@@ -9,8 +9,11 @@ import { NavController } from '@ionic/angular';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 
+import { IonicStorageModule } from '@ionic/storage';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { FlurryAnalytics } from '@ionic-native/flurry-analytics/ngx';
+
 import { filter, map } from 'rxjs/operators';
 
 import { AppComponent } from './app.component';
@@ -29,6 +32,7 @@ import { AppRoutingModule } from './app-routing.module';
   providers: [
     StatusBar,
     SplashScreen,
+    FlurryAnalytics,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
