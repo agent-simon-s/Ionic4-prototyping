@@ -1,4 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
+import { Observable }      from 'rxjs';
+//import { QuestionService } from  '../services/ngguide.question.service';
+//import { QuestionBase } from  '../data/ngguide.QuesBase.class';
 
 @Component({
   selector: 'app-home',

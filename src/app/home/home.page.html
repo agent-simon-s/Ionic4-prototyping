@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      dev-ion4-reacitve-form-array
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,37 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">dev-ion4-reacitve-form-array</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <div class="container">
+      <strong>This is a maquette for the quiz app</strong>
+    </div>
+
+    <!--  <div class="container">
+      <app-cmn-scale-quiz-form></app-cmn-scale-quiz-form>
+    </div> -->
+
+    <!-- <div class="container">
+      <strong>NG GUIDE VERSION</strong>
+      <p>Taken from https://angular.io/guide/dynamic-form</p>
+      <app-ng-guide-form [questions]="questions$ | async"></app-ng-guide-form>
+    </div> -->
+
+    <div class="container">
+      <strong>dev.to VERSION</strong>
+      <p>Based on https://dev.to/max/build-dynamic-angular-forms-on-the-fly-4n3m</p>
+      <app-devto-dynamic-form #dynamicForm [questions]="questions"></app-devto-dynamic-form>
+    </div>
+
+    <div class="container">
+      <strong>fireship VERSION</strong>
+      <p>Taken from https://fireship.io/lessons/basics-reactive-forms-in-angular/</p>
+      <app-fireship-form></app-fireship-form>
+    </div>
+    
   </div>
 </ion-content>
